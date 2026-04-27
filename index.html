@@ -101,7 +101,7 @@
               <strong id="cashStat">$5K</strong>
             </article>
             <article id="runwayStatPill" class="stat-pill runway-pill">
-              <span>Runway</span>
+              <span>Runway <button class="help-tip" type="button" aria-label="Runway: how many weeks you can survive with current cash.">?</button></span>
               <strong id="runwayStat">14w</strong>
             </article>
             <article class="stat-pill">
@@ -113,7 +113,7 @@
               <strong id="growthStat">0%</strong>
             </article>
             <article class="stat-pill optional-pill">
-              <span>Burn</span>
+              <span>Burn <button class="help-tip" type="button" aria-label="Burn: weekly operating cost from team, product, marketing, and optional spend.">?</button></span>
               <strong id="burnStat">$350</strong>
             </article>
             <article class="stat-pill streak-pill">
@@ -177,8 +177,8 @@
               <section class="timeline-panel" aria-labelledby="historyTitle">
                 <div class="timeline-header">
                   <div>
-                    <span>Founder dossier</span>
-                    <h2 id="historyTitle">Weekly Reports</h2>
+                    <span>Recent</span>
+                    <h2 id="historyTitle">Run Log</h2>
                   </div>
                   <span id="historyCount">0</span>
                 </div>
@@ -199,6 +199,7 @@
                   <strong>Tip</strong>
                   <span id="insightText">Choose your first move. Every option has a cost.</span>
                 </div>
+                <div id="guidedTip" class="guided-tip" aria-live="polite"></div>
                 <div id="decisionButtons" class="decision-list"></div>
                 <section id="decisionResultPanel" class="decision-result-panel is-hidden" aria-live="polite">
                   <p class="eyebrow">Decision result</p>
@@ -307,7 +308,7 @@
 
               <section class="product-overview-grid" aria-label="Product overview">
                 <article>
-                  <span>Quality</span>
+                  <span>Quality <button class="help-tip" type="button" aria-label="Product quality: improves retention, trust, conversion, and future growth.">?</button></span>
                   <strong id="productQualityStat">55</strong>
                   <div class="meter"><span id="productQualityBar"></span></div>
                 </article>
@@ -432,7 +433,10 @@
                   <h2 id="marketViewTitle">Strategy Room</h2>
                   <span id="marketStatusLine">Find a segment, sharpen the wedge, and defend your lane.</span>
                 </div>
-                <strong id="marketFitBadge">Emerging Fit</strong>
+                <div class="fit-badge-wrap">
+                  <strong id="marketFitBadge">Emerging Fit</strong>
+                  <button class="help-tip" type="button" aria-label="Market fit: how well demand, differentiation, reputation, and product quality work together.">?</button>
+                </div>
               </header>
 
               <section class="market-overview-grid" aria-label="Market overview">
@@ -762,15 +766,33 @@
       <article class="onboarding-modal">
         <p class="eyebrow">Founder briefing</p>
         <h2 id="onboardingTitle">Welcome to LaunchLab</h2>
-        <p>
-          LaunchLab is a startup simulation game where every decision changes your company across product, cash, team, market, and growth.
-        </p>
-        <ul>
-          <li>Build products, manage runway, grow users, and unlock achievements.</li>
-          <li>Hire carefully: bigger teams help execution but raise burn.</li>
-          <li>Pricing matters: high prices can reduce conversion and hurt trust.</li>
-          <li>Low runway can end the startup, while strong product and market fit improve growth.</li>
-        </ul>
+        <div class="guide-sections">
+          <section>
+            <h3>Goal</h3>
+            <p>Build a startup and survive as long as possible.</p>
+          </section>
+          <section>
+            <h3>What matters</h3>
+            <ul>
+              <li><b>Cash</b>: run out and the startup fails.</li>
+              <li><b>Users</b>: traction and growth signal.</li>
+              <li><b>Product quality</b>: retention and trust.</li>
+              <li><b>Market fit</b>: growth becomes more efficient.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Core idea</h3>
+            <p>Every decision affects multiple systems. Growth, cash, quality, and reputation pull against each other.</p>
+          </section>
+          <section>
+            <h3>Simple tips</h3>
+            <ul>
+              <li>Do not grow too fast without product quality.</li>
+              <li>High price reduces conversion.</li>
+              <li>Control burn before runway gets scary.</li>
+            </ul>
+          </section>
+        </div>
         <div class="onboarding-actions">
           <button id="startSimulationButton" class="primary-button" type="button">Start Simulation</button>
           <button id="dismissOnboardingButton" class="ghost-button" type="button">Don’t show again</button>
